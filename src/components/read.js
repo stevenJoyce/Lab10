@@ -11,8 +11,8 @@ class Read extends React.Component {
 
     componentDidMount() {
       axios.get('http://localhost:4000/api/movies')
-      .then((Response)=>{
-        this.setState({movies:Response.data.movies});
+      .then((response)=>{
+        this.setState({movies:response.data.movies});
       })
       .catch((error)=>{
         console.log(error);

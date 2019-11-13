@@ -12,13 +12,13 @@ class MovieItem extends React.Component {
         super();
         this.DeleteMovie = this.DeleteMovie.bind(this);
     }
-
-    DeleteMovie(){
-        console.log("Delete Button Clicked");
-
-        Axios.delete('http://localhost:4000/api/movies/'+ this.props.movie._id)
-        .then()
-        .catch();
+  
+    DeleteMovie(e){
+      console.log("Delete Clicked");
+      Axios.delete("http://localhost:4000/api/movies/"+this.props.movie._id)
+      .then()
+      .catch();
+  
     }
     render(){
         return (
